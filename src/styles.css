@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+font {
+  font-family: poppins font;
+}
+@layer base {
+  :root {
+    --background: rgb(23, 29, 43);
+    /* --background-2: rgb(25, 30, 35); */
+    --background-gradient: linear-gradient(
+      297.53deg,
+      rgba(40, 40, 43, 0.6) 1.07%,
+      rgba(43, 54, 64, 0.6) 55.24%
+    );
+    --white: rgb(255, 255, 255);
+    --muted: rgb(161, 161, 170);
+    --section-title: rgb(15, 21, 36);
+    --section-back-title: rgb(43, 54, 64);
+    --btn-primary: rgb(2, 111, 210);
+    --btn-primary-hover: rgb(2, 99, 186);
+    --btn-secondary: rgb(70, 88, 104);
+    --btn-secondary-hover: rgb(59, 75, 88);
+    --blue: rgb(2, 111, 210);
+    --yellow: rgb(255, 225, 0);
+  }
+}
+.bg-img {
+  background: url(/bg-img.png), var(--background);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: right;
+}
+
+.backgrond {
+  animation: down 3s linear infinite;
+}
+@keyframes down {
+  0% {
+    transform: translateY(0);
+    opacity: 25%;
+    color: rgb(225, 223, 223);
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 25%;
+    color: rgb(225, 223, 223);
+  }
+}
+
+.arrow {
+  animation: right 3s linear infinite;
+}
+@keyframes right {
+  0% {
+    transform: translateX(0);
+    opacity: 25%;
+    color: rgb(225, 223, 223);
+  }
+  50% {
+    transform: translateX(20px);
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 25%;
+    color: rgb(225, 223, 223);
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  animation: slide 40s linear infinite alternate backwards;
+}
+.line::after {
+  content: "";
+  width: 200px;
+  height: 3px;
+  background-color: rgba(169, 169, 169, 0.492);
+  top: 35%;
+  left: 25%;
+  position: absolute;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: -50%;
+  }
+  50% {
+    left: -100%;
+  }
+  75% {
+    left: -50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .line::after {
+    content: "";
+    width: 3px;
+    height: 220px;
+    background-color: rgba(169, 169, 169, 0.492);
+    top: 25%;
+    left: 50%;
+    position: absolute;
+  }
+  .line-footer::after {
+    content: "";
+    width: 3px;
+    height: 200px;
+    background-color: rgba(169, 169, 169, 0.492);
+    top: 20%;
+    left: 50%;
+    position: absolute;
+  }
+}
